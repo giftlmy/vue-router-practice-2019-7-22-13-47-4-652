@@ -1,8 +1,13 @@
 <template>
 
    <div id="app">
-       <div><button>返回</button></div>
-        <h1> welcome to {{username}} </h1>
+        <div class='back'>
+           <button @click="backmain">返回登录</button>
+           <button @click="myview">我的页面</button>
+        </div>
+        <div class='username'><h1>welcome  {{username}} 同学 </h1></div>
+      
+      
         <h2>
             Vue To Do List
             Simple Todo List with adding and filter by diff status.
@@ -25,11 +30,29 @@ export default {
             CreateForm,
             TodoList,
             TodoListFilter,
+    },
+    methods: {
+        backmain: function() {
+            if(confirm('确实要返回吗?')){
+                this.$router.push("/");
+            }
         },
+        myview: function() {
+            this.$router.push("/MyView/"+this.username);
+             
+
+        }
+    }
 
 }
 </script>
 
 <style>
+.back {
+     text-align: left;
 
+}
+.uername {
+    text-align: right;
+}
 </style>

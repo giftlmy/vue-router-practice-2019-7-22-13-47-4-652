@@ -60,6 +60,18 @@ export default {
                 console.log(error.response);
             });
         },
+        updateTodos(context){
+            const url = "http://5b4dcb2aec112500143a2311.mockapi.io/api/todos/112";
+            axios.put(url,{
+                id:112,
+                content: "lmy",
+                status: "active"    
+            }).then(function(response){
+                context.dispatch('createTodo');
+            }).catch(function(error){
+                console.log(error.response);
+            });
+        }
 
         
         

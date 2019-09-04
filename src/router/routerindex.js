@@ -2,6 +2,7 @@ import Router from 'vue-router';
 import Vue from 'vue';
 import Welcome from '../components/Welcome.vue'
 import MainView from '../components/MainView.vue'
+import User from '../components/User.vue'
 // import CounterGroup from '../components/CounterGroup.vue'
 // import User from '../components/User.vue'
 
@@ -34,6 +35,12 @@ export default new Router({
             path: '/MainView/:username',
             name: "main",
             component: MainView,
+            props: true,
+        },
+        {
+            path: '/MyView/:username',
+            name: "user",
+            component: User,
             props: true,
         }
     ]

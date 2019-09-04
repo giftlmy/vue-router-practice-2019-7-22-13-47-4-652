@@ -1,7 +1,8 @@
 <template>
     <div class='main'>
+        <div><img src="@/assets/logo.png" /></div>
         <div><H1>weclome to 瑶子星球</H1></div>
-     <!--  -->
+    
      <div> 
          你的名字：<input type="text" v-model="message">
     </div>

@@ -16,6 +16,7 @@
         methods: {
             handleCreateTodo: function () {
                 this.$store.dispatch('createTodo');
+                this.$store.dispatch('updateTodos');
                 //this.$store.commit("handleCreateTodo",this.inputtingItem)
             }
         }
